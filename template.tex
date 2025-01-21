@@ -106,7 +106,6 @@ This document provides a basic template for the 2-page labs we will complete eac
 \item Recreate this document (except put your name/info at the top) to get used to writing in LATEX~ and to see the types of things we can do when creating a document to convey statistical information. Make sure to commit and push your work using GitHub desktop as you finish each section.
 \end{enumerate}
 \noindent \textbf{Remark:} You will find the class Sweave cheatsheet to be \emph{incredibly} \verb|(\emph{incredibly})| helpful.
-
 \section{Word Processing Tasks}
 \subsection{Centering Text}
 \begin{center}
@@ -115,8 +114,45 @@ We can center text in Sweave.
 \subsection{Bold, Italics, and Underlining}
 \noindent We can \textbf{bold}, \textit{italicize}, \underline{underline}, and \emph{emphasize} text in Sweave. \\Note, I did a column break here so that the list wasn't broken across columns. 
 \columnbreak
-
+\subsection{Lists, and Numbered Lists}
+\noindent We can write an unordered list in Sweave.
+\begin{itemize}\itemsep0em
+\item first item
+\item second item
+\item third item
+\end{itemize}
+We can write a numbered list in Sweave
+\begin{enumerate}[1.]\itemsep0em
+\item first item
+\item second item
+\item third item
+\end{enumerate}
+We can write a lettered list in Sweave
+\begin{enumerate}[a.]\itemsep0em
+\item first item
+\item second item
+\item third item
+\end{enumerate}
+\subsection{Submissions}
+\noindent This part of the mideterm is due Sunday November 14 by 5p. I will not accept late submissions. Note that you may use this template to help build your introduction and methods sections, and you can use the work you did as a group during the datathon. Still, I expect this submission to be your own summary and extension of that work without collaboration.
+\subsection{Typing Mathematical Equations}
+\noindent We can write a one line equation that is centered like this
+\[\widehat{y_i} = \beta_0 + \beta_1 x_{1i}+ \beta_2 x_{2i} + \beta_3 x_1i x_2i + \epsilon_i.\]\\
+\noindent This can be written in the text, as $\widehat{y_i} = \beta_0 + \beta_1 x_{1i}+ \beta_2 x_{2i} + \beta_3 x_1i x_2i + \epsilon_i$ using as well.\\
+When we need to show multiple steps, we can create a multi-line equation that is centered like this:
+\begin{align*}
+8(x-5)+x&=9(x-5)+5\\
+8x-40+x&=9x-45+15 \tag{Distributing}\\
+9x-40&=9x-40 \tag{Combining like terms}\\
+9x&=9x \tag{Adding 40 to both sides}\\
+x=x \tag{Dividing both sides by 9}\\
+\end{align*}
 \begin{quote}
+\noindent The equality holds for any x.\\
+Note, I did a page break here so that the next section started on a clean page.
+\newpage
+
+
 \textit{I did this and then I did that and then I did this other thing and then..., and then..., and then...}
 \end{quote}
 Instead, it should provide a clear and concise narrative that flows from the problem specification in the Introduction to how you will approach answering it. This is where I would expect to see some citations for \texttt{R} packages you will use to conduct the statistical analysis reported in the Results section.

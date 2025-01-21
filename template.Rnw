@@ -100,8 +100,13 @@ x=x \tag{Dividing both sides by 9}\\
 \noindent The equality holds for any x.\\
 Note, I did a page break here so that the next section started on a clean page.
 \newpage
-
-
+\subsection{Running R Code}
+\noindent Code chunks can be entered into Sweave; e.g., here are some comments.
+<<size=’scriptsize’>>=
+# R code goes here
+# Output is automatically printed in the pdf
+@
+Below, you see that we can do algebra with R.
 \textit{I did this and then I did that and then I did this other thing and then..., and then..., and then...}
 \end{quote}
 Instead, it should provide a clear and concise narrative that flows from the problem specification in the Introduction to how you will approach answering it. This is where I would expect to see some citations for \texttt{R} packages you will use to conduct the statistical analysis reported in the Results section.
