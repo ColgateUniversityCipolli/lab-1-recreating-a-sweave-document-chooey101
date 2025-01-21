@@ -39,24 +39,26 @@
 
 \begin{multicols}{2}
 \begin{abstract}
-This document provides a basic template for the 2-page labs we will complete each week. Here, briefly summarize what you did and why it might be helpful. Provide all the top-line conclusions, but avoid providing \emph{all} the details. Results should be limited to ``we show X, Y, and Z."
+This document provides a basic template for the 2-page labs we will complete each week. Here, you should provide a succinct summary about what you did and why it might be helpful.
 \end{abstract}
 
-\noindent \textbf{Keywords:} What topics does the lab cover concerning class? List 3-4 key terms here, separated by semicolons.
+\textbf{Keywords:} What topics does the lab cover with respect to class?
 
-\section{Introduction}
-Provide an overarching summary of what you're talking about. In this section, you introduce the idea to the reader, and your goal is to pull them in. What's the mystery you aim to solve?
+\section{Instructions}
+\noindent For this lab, you will 
+\begin{enumerate}[1.]\itemsep0em
+\item Install \href{https://cran.rstudio.com/}{R} and \href{https://cran.rstudio.com/}{RStudio}
+\item Install tinytex (if necessary):  {\tt{install.packages("tinytex")}
+\item Create a GitHub account \href{https://github.com/}{here}, and email me your user-name.
+\item Install \href{https://desktop.github.com/}{GitHub desktop}
+\item Accept the LAB 1 assignment \href{https://classroom.github.com/a/gfC_xMMl}{here}.
+\item Recreate this document (except put your name/info at the top) to get used to writing in LATEX~ and to see the types of things we can do when creating a document to convey statistical information. Make sure to commit and push your work using GitHub desktop as you finish each section.
+\end{enumerate}
+\noindent \textbf{Remark:} You will find the class Sweave cheatsheet to be \emph{incredibly} \verb|(\emph{incredibly})| helpful.
 
-You want to provide enough background to understand the context of the work. Specifically, what is the question you are addressing? If it applies, describe what information currently exists about this problem, including citations, and explain how the question you're answering complements this work.
-
-Provide a roadmap of the structure of the paper. 
-
-\subsection{Intro Subsection}
-You might need/want to discuss the topics in subsections. Or, you may have multiple questions.
-
-
-\section{Methods}
-Describe the data you are working with, if applicable. Describe the specific process you will follow to answer the question at hand. This does not mean you should write something like this.
+\section{Word Processing Tasks}
+\subsection{Centering Text}
+\texttt{}
 \begin{quote}
 \textit{I did this and then I did that and then I did this other thing and then..., and then..., and then...}
 \end{quote}
