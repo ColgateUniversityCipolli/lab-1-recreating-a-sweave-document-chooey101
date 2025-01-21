@@ -24,7 +24,7 @@
 \begin{document}
 
 \vspace{-1in}
-\title{Lab XX -- MATH 240 -- Computational Statistics}
+\title{Lab 1 -- MATH 240 -- Computational Statistics}
 
 \author{
   First Author \\
@@ -48,7 +48,7 @@ This document provides a basic template for the 2-page labs we will complete eac
 \noindent For this lab, you will 
 \begin{enumerate}[1.]\itemsep0em
 \item Install \href{https://cran.rstudio.com/}{R} and \href{https://cran.rstudio.com/}{RStudio}
-\item Install tinytex (if necessary):  {\tt{install.packages("tinytex")}
+\item Install tinytex (if necessary): \texttt{install.packages("tinytex")}
 \item Create a GitHub account \href{https://github.com/}{here}, and email me your user-name.
 \item Install \href{https://desktop.github.com/}{GitHub desktop}
 \item Accept the LAB 1 assignment \href{https://classroom.github.com/a/gfC_xMMl}{here}.
@@ -58,7 +58,34 @@ This document provides a basic template for the 2-page labs we will complete eac
 
 \section{Word Processing Tasks}
 \subsection{Centering Text}
-\texttt{}
+\begin{center}
+We can center text in Sweave.
+\end{center}
+\subsection{Bold, Italics, and Underlining}
+\noindent We can \textbf{bold}, \textit{italicize}, \underline{underline}, and \emph{emphasize} text in Sweave. \\Note, I did a column break here so that the list wasn't broken across columns. 
+\columnbreak
+\subsection{Lists, and Numbered Lists}
+\noindent We can write an unordered list in Sweave.
+\begin{itemize}\itemsep0em
+\item first item
+\item second item
+\item third item
+\end{itemize}
+We can write a numbered list in Sweave
+\begin{enumerate}[1.]\itemsep0em
+\item first item
+\item second item
+\item third item
+\end{enumerate}
+We can write a lettered list in Sweave
+\begin{enumerate}[a.]\itemsep0em
+\item first item
+\item second item
+\item third item
+\end{enumerate}
+\subsection{Submissions}
+\noindent This part of the mideterm is due Sunday November 14 by 5p. I will not accept late submissions. Note that you may use this template to help build your introduction and methods sections, and you can use the work you did as a group during the datathon. Still, I expect this submission to be your own summary and extension of that work without collaboration.
+
 \begin{quote}
 \textit{I did this and then I did that and then I did this other thing and then..., and then..., and then...}
 \end{quote}
