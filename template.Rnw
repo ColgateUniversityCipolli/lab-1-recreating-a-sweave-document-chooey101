@@ -48,7 +48,7 @@ This document provides a basic template for the 2-page labs we will complete eac
 \noindent For this lab, you will 
 \begin{enumerate}[1.]\itemsep0em
 \item Install \href{https://cran.rstudio.com/}{R} and \href{https://cran.rstudio.com/}{RStudio}
-\item Install tinytex (if necessary): \texttt{install.packages("tinytex")}
+\item Install tinytex (if necessary): \\\texttt{install.packages("tinytex")}
 \item Create a GitHub account \href{https://github.com/}{here}, and email me your user-name.
 \item Install \href{https://desktop.github.com/}{GitHub desktop}
 \item Accept the LAB 1 assignment \href{https://classroom.github.com/a/gfC_xMMl}{here}.
@@ -136,6 +136,45 @@ result.with.error
 The result is \Sexpr{result.with.error}. Note that I did not type the result, but I used the command.
 \subsection{Plotting}
 \noindent We can also plot with R.
+\scriptsize
+<<plot1, eval=FALSE>>=
+#Plot a histogram of random exponential data
+hist(rexp(100))
+@
+\normalsize
+\begin{figure}[H]
+\begin{center}
+%This code is evaluated, but not printed
+%warning=FALSE and message=FALSE ensure no text is returned as a by product of
+%printing; this would cause an error in that plot+text is returned instead of
+%just the plot
+<<echo=FALSE, warning=FALSE, message=FALSE, fig.dim=c(5,3.5)>>=
+<<plot1>>
+@
+\caption{A histogram of random exponentially distributed data, $n=100$.}
+\label{plot1} %we can now reference plot1
+\end{center}
+\end{figure}
+\columnbreak
+\subsection{Tables}
+\noindent
+Below, we load and take a peek at some data about the death rates per 1000 in Virginia in 1940 (Molyneaux et al., 1947).
+\scriptsize
+<<>>=
+data(VADeaths)
+head(VADeaths) # Take a peek of the data
+@
+\normalsize
+If we want to print this nicely, we can do so using the
+xtable package (Dahl et al., 2019), which we can reference
+using the label VADeaths.tab.
+\scriptsize
+<<>>=
+library(xtable)
+sleep.table<-xtable(VADeaths ,
+label = "VADeaths.tab",
+caption = "Death Rates per 1000 in Virginia (1940).")
+\normalsize
 \textit{I did this and then I did that and then I did this other thing and then..., and then..., and then...}
 \end{quote}
 Instead, it should provide a clear and concise narrative that flows from the problem specification in the Introduction to how you will approach answering it. This is where I would expect to see some citations for \texttt{R} packages you will use to conduct the statistical analysis reported in the Results section.
