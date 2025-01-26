@@ -151,8 +151,56 @@ x=x \tag{Dividing both sides by 9}\\
 \noindent The equality holds for any x.\\
 Note, I did a page break here so that the next section started on a clean page.
 \newpage
-
-
+\subsection{Running R Code}
+\noindent Code chunks can be entered into Sweave; e.g., here are some comments.
+\scriptsize
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{# R code goes here}
+\hlcom{# Output is automatically printed in the pdf}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\normalsize
+Below, you see that we can do algebra with R.
+\scriptsize
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlnum{8}\hlopt{*}\hldef{(}\hlnum{9}\hlopt{-}\hlnum{5}\hldef{)} \hlopt{+} \hlnum{9} \hlcom{# 8(x-5) + x for x=9}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\normalsize
+Alternatively, we can produced the output without the code.
+\scriptsize
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## [1] 41
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+\normalsize
+Below, we show we can produced the code without evaluating it.
+\scriptsize
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{result} \hlkwb{<-} \hlnum{8}\hlopt{*}\hldef{(}\hlnum{9}\hlopt{-}\hlnum{5}\hldef{)} \hlopt{+} \hlnum{9} \hlcom{# 8(x-5) + x for x = 9}
+\hldef{result.with.error} \hlkwb{<-} \hldef{result} \hlopt{+} \hlkwd{rnorm}\hldef{(}\hlnum{1}\hldef{,} \hlkwc{mean} \hldef{=} \hlnum{0}\hldef{,} \hlkwc{sd} \hldef{=} \hlnum{0.1}\hldef{)}
+\hldef{result.with.error}
+\end{alltt}
+\begin{verbatim}
+## [1] 40.91048
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+\normalsize
+The result is 40.9104838. Note that I did not type the result, but I used the command.
+\subsection{Plotting}
+\noindent We can also plot with R. 
 \textit{I did this and then I did that and then I did this other thing and then..., and then..., and then...}
 \end{quote}
 Instead, it should provide a clear and concise narrative that flows from the problem specification in the Introduction to how you will approach answering it. This is where I would expect to see some citations for \texttt{R} packages you will use to conduct the statistical analysis reported in the Results section.

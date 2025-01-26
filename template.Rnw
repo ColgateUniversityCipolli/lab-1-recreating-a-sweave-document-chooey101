@@ -102,11 +102,40 @@ Note, I did a page break here so that the next section started on a clean page.
 \newpage
 \subsection{Running R Code}
 \noindent Code chunks can be entered into Sweave; e.g., here are some comments.
-<<size=’scriptsize’>>=
+\scriptsize
+<<>>=
 # R code goes here
 # Output is automatically printed in the pdf
 @
+\normalsize
 Below, you see that we can do algebra with R.
+\scriptsize
+<<>>=
+8*(9-5) + 9 # 8(x-5) + x for x=9
+@
+\normalsize
+Alternatively, we can produced the output without the code.
+\scriptsize
+<<echo=FALSE>>=
+8*(9-5) + 9
+@
+\normalsize
+Below, we show we can produced the code without evaluating it.
+\scriptsize
+<<eval=FALSE>>=
+8*(9-5) + 9
+@
+We can also call objects from R directly.
+\scriptsize
+<<>>=
+result <- 8*(9-5) + 9 # 8(x-5) + x for x = 9
+result.with.error <- result + rnorm(1, mean = 0, sd = 0.1)
+result.with.error
+@
+\normalsize
+The result is \Sexpr{result.with.error}. Note that I did not type the result, but I used the command.
+\subsection{Plotting}
+\noindent We can also plot with R.
 \textit{I did this and then I did that and then I did this other thing and then..., and then..., and then...}
 \end{quote}
 Instead, it should provide a clear and concise narrative that flows from the problem specification in the Introduction to how you will approach answering it. This is where I would expect to see some citations for \texttt{R} packages you will use to conduct the statistical analysis reported in the Results section.
