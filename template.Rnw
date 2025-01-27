@@ -125,6 +125,7 @@ Below, we show we can produced the code without evaluating it.
 <<eval=FALSE>>=
 8*(9-5) + 9
 @
+\normalsize
 We can also call objects from R directly.
 \scriptsize
 <<>>=
@@ -167,14 +168,20 @@ head(VADeaths) # Take a peek of the data
 \normalsize
 If we want to print this nicely, we can do so using the
 xtable package (Dahl et al., 2019), which we can reference
-using the label VADeaths.tab.
+using the label.
 \scriptsize
 <<>>=
 library(xtable)
 sleep.table<-xtable(VADeaths ,
 label = "VADeaths.tab",
 caption = "Death Rates per 1000 in Virginia (1940).")
+@
 \normalsize
+<<results="asis", echo=FALSE>>=
+print(sleep.table,
+table.placement = "H", include.rownames=FALSE, size = "small")
+@
+
 \textit{I did this and then I did that and then I did this other thing and then..., and then..., and then...}
 \end{quote}
 Instead, it should provide a clear and concise narrative that flows from the problem specification in the Introduction to how you will approach answering it. This is where I would expect to see some citations for \texttt{R} packages you will use to conduct the statistical analysis reported in the Results section.
