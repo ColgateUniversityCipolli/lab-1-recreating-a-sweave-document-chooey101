@@ -96,7 +96,6 @@ When we need to show multiple steps, we can create a multi-line equation that is
 9x&=9x \tag{Adding 40 to both sides}\\
 x=x \tag{Dividing both sides by 9}\\
 \end{align*}
-\begin{quote}
 \noindent The equality holds for any x.\\
 Note, I did a page break here so that the next section started on a clean page.
 \newpage
@@ -165,7 +164,6 @@ caption = "Death Rates per 1000 in Virginia (1940).")
 print(sleep.table,
 table.placement = "H", include.rownames=FALSE, size = "small")
 @
-\end{quote}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
