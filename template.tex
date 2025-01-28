@@ -153,8 +153,7 @@ Note, I did a page break here so that the next section started on a clean page.
 \newpage
 \subsection{Running R Code}
 \noindent Code chunks can be entered into Sweave; e.g., here are some comments.
-\scriptsize
-\begin{knitrout}
+\begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlcom{# R code goes here}
@@ -162,10 +161,8 @@ Note, I did a page break here so that the next section started on a clean page.
 \end{alltt}
 \end{kframe}
 \end{knitrout}
-\normalsize
 Below, you see that we can do algebra with R.
-\scriptsize
-\begin{knitrout}
+\begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlnum{8}\hlopt{*}\hldef{(}\hlnum{9}\hlopt{-}\hlnum{5}\hldef{)} \hlopt{+} \hlnum{9} \hlcom{# 8(x-5) + x for x=9}
@@ -175,30 +172,24 @@ Below, you see that we can do algebra with R.
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-\normalsize
 Alternatively, we can produced the output without the code.
-\scriptsize
-\begin{knitrout}
+\begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
 ## [1] 41
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-\normalsize
 Below, we show we can produced the code without evaluating it.
-\scriptsize
-\begin{knitrout}
+\begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlnum{8}\hlopt{*}\hldef{(}\hlnum{9}\hlopt{-}\hlnum{5}\hldef{)} \hlopt{+} \hlnum{9}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
-\normalsize
 We can also call objects from R directly.
-\scriptsize
-\begin{knitrout}
+\begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hldef{result} \hlkwb{<-} \hlnum{8}\hlopt{*}\hldef{(}\hlnum{9}\hlopt{-}\hlnum{5}\hldef{)} \hlopt{+} \hlnum{9} \hlcom{# 8(x-5) + x for x = 9}
@@ -206,16 +197,14 @@ We can also call objects from R directly.
 \hldef{result.with.error}
 \end{alltt}
 \begin{verbatim}
-## [1] 41.04959
+## [1] 41.06858
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-\normalsize
-The result is 41.0495942. Note that I did not type the result, but I used the command.
+The result is 41.0685799. Note that I did not type the result, but I used the command.
 \subsection{Plotting}
 \noindent We can also plot with R.
-\scriptsize
-\begin{knitrout}
+\begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlcom{#Plot a histogram of random exponential data}
@@ -223,7 +212,6 @@ The result is 41.0495942. Note that I did not type the result, but I used the co
 \end{alltt}
 \end{kframe}
 \end{knitrout}
-\normalsize
 \begin{figure}[H]
 \begin{center}
 %This code is evaluated, but not printed
@@ -242,8 +230,7 @@ The result is 41.0495942. Note that I did not type the result, but I used the co
 \subsection{Tables}
 \noindent
 Below, we load and take a peek at some data about the death rates per 1000 in Virginia in 1940 \citep{VADeath}.
-\scriptsize
-\begin{knitrout}
+\begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlkwd{data}\hldef{(VADeaths)}
@@ -259,12 +246,10 @@ Below, we load and take a peek at some data about the death rates per 1000 in Vi
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-\normalsize
 If we want to print this nicely, we can do so using the
 xtable package \citep{xtable}, which we can reference
-using the label (Table\ref{VADeaths.tab}).
-\scriptsize
-\begin{knitrout}
+using the label (Table \ref{VADeaths.tab}).
+\begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlkwd{library}\hldef{(xtable)}
@@ -274,9 +259,8 @@ using the label (Table\ref{VADeaths.tab}).
 \end{alltt}
 \end{kframe}
 \end{knitrout}
-\normalsize
 % latex table generated in R 4.4.2 by xtable 1.8-4 package
-% Mon Jan 27 19:22:01 2025
+% Tue Jan 28 11:45:16 2025
 \begin{table}[H]
 \centering
 \begingroup\small
@@ -318,7 +302,7 @@ Rural Male & Rural Female & Urban Male & Urban Female \\
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{lrcccc}\\\hline
-Term & \ SS (Type III) & \ df & \ F & \ p-value & \ s \\\hline
+Term & \ SS (Type III) & \ df & \ F & \ p-value & \ $\varepsilon_p^2$ \\\hline
 (intercept) &4.95 &1.00 &5.37 &0.0209\\    
 White-Poor (Z) &3.17 &1.00 &3.44 &0.0642 &0.02\\
 Zero-Sum (Z) &17.96 &1.00 &19.48 &<0.0001 &0.03\\\
@@ -334,8 +318,7 @@ Residuals &506.92 &550.00\\\hline
 \end{center}
 \end{table}
 The \textbf{palmerpenguins} package for \textbf{r} \citep{palmerpenguins} provides data on adult foraging penguins near Palmer Station, Antarctica. Figure \ref{fig2} is too big to fit nicely in our column-based-template above, so I’ve placed it here in the abstract by saving it and presenting it scaled to 0.75.
-\scriptsize
-\begin{knitrout}
+\begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
 \hlkwd{library}\hldef{(palmerpenguins)}
@@ -345,7 +328,6 @@ The \textbf{palmerpenguins} package for \textbf{r} \citep{palmerpenguins} provid
 \end{alltt}
 \end{kframe}
 \end{knitrout}
-\normalsize
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.75]{figure/penguins.pdf}

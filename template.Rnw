@@ -102,47 +102,35 @@ Note, I did a page break here so that the next section started on a clean page.
 \newpage
 \subsection{Running R Code}
 \noindent Code chunks can be entered into Sweave; e.g., here are some comments.
-\scriptsize
-<<>>=
+<<size="scriptsize">>=
 # R code goes here
 # Output is automatically printed in the pdf
 @
-\normalsize
 Below, you see that we can do algebra with R.
-\scriptsize
-<<>>=
+<<size="scriptsize">>=
 8*(9-5) + 9 # 8(x-5) + x for x=9
 @
-\normalsize
 Alternatively, we can produced the output without the code.
-\scriptsize
-<<echo=FALSE>>=
+<<size="scriptsize", echo=FALSE>>=
 8*(9-5) + 9
 @
-\normalsize
 Below, we show we can produced the code without evaluating it.
-\scriptsize
-<<eval=FALSE>>=
+<<size="scriptsize", eval=FALSE>>=
 8*(9-5) + 9
 @
-\normalsize
 We can also call objects from R directly.
-\scriptsize
-<<>>=
+<<size="scriptsize">>=
 result <- 8*(9-5) + 9 # 8(x-5) + x for x = 9
 result.with.error <- result + rnorm(1, mean = 0, sd = 0.1)
 result.with.error
 @
-\normalsize
 The result is \Sexpr{result.with.error}. Note that I did not type the result, but I used the command.
 \subsection{Plotting}
 \noindent We can also plot with R.
-\scriptsize
-<<plot1, eval=FALSE>>=
+<<plot1, size="scriptsize", eval=FALSE>>=
 #Plot a histogram of random exponential data
 hist(rexp(100))
 @
-\normalsize
 \begin{figure}[H]
 \begin{center}
 %This code is evaluated, but not printed
@@ -160,23 +148,19 @@ hist(rexp(100))
 \subsection{Tables}
 \noindent
 Below, we load and take a peek at some data about the death rates per 1000 in Virginia in 1940 \citep{VADeath}.
-\scriptsize
-<<>>=
+<<size="scriptsize">>=
 data(VADeaths)
 head(VADeaths) # Take a peek of the data
 @
-\normalsize
 If we want to print this nicely, we can do so using the
 xtable package \citep{xtable}, which we can reference
-using the label (Table\ref{VADeaths.tab}).
-\scriptsize
-<<>>=
+using the label (Table \ref{VADeaths.tab}).
+<<size="scriptsize">>=
 library(xtable)
 sleep.table<-xtable(VADeaths ,
 label = "VADeaths.tab",
 caption = "Death Rates per 1000 in Virginia (1940).")
 @
-\normalsize
 <<results="asis", echo=FALSE>>=
 print(sleep.table,
 table.placement = "H", include.rownames=FALSE, size = "small")
@@ -203,7 +187,7 @@ table.placement = "H", include.rownames=FALSE, size = "small")
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{lrcccc}\\\hline
-Term & \ SS (Type III) & \ df & \ F & \ p-value & \ s \\\hline
+Term & \ SS (Type III) & \ df & \ F & \ p-value & \ $\varepsilon_p^2$ \\\hline
 (intercept) &4.95 &1.00 &5.37 &0.0209\\    
 White-Poor (Z) &3.17 &1.00 &3.44 &0.0642 &0.02\\
 Zero-Sum (Z) &17.96 &1.00 &19.48 &<0.0001 &0.03\\\
@@ -219,14 +203,12 @@ Residuals &506.92 &550.00\\\hline
 \end{center}
 \end{table}
 The \textbf{palmerpenguins} package for \textbf{r} \citep{palmerpenguins} provides data on adult foraging penguins near Palmer Station, Antarctica. Figure \ref{fig2} is too big to fit nicely in our column-based-template above, so I’ve placed it here in the abstract by saving it and presenting it scaled to 0.75.
-\scriptsize
-<<eval=FALSE>>=
+<<size="scriptsize", eval=FALSE>>=
 library(palmerpenguins)
 pdf("figure/penguins.pdf", width = 8, height = 5)
 plot(penguins)
 dev.off()
 @
-\normalsize
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.75]{figure/penguins.pdf}
