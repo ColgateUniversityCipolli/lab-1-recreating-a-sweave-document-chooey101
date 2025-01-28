@@ -27,10 +27,10 @@
 \title{Lab 1 -- MATH 240 -- Computational Statistics}
 
 \author{
-  First Author \\
+  Charlie Hooey \\
   Affiliation  \\
   Department  \\
-  {\tt email@domain}
+  {\tt chooey@colgate.edu}
 }
 
 \date{}
